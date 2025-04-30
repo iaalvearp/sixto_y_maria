@@ -1,0 +1,39 @@
+---
+
+interface Props {
+    id: string,
+    text: string
+}
+
+ const { id, text } = Astro.props
+
+---
+
+<div class="item-container flex flex-col justify-center items-center">
+    <span id={ id } class="item-number flex flex-col justify-center items-center gap-y-2 tabular-nums text-xl md:text-3xl">00</span>
+    <span class="item-text text-base md:text-2xl">{ text }</span>
+</div>
+
+<style>
+    .item-container {
+        width: 100%;
+        height: 100%;
+        gap: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--gray);
+
+        .item-number {
+            font-family: 'Times', serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        .item-text {
+            font-family: 'Myriad', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+</style>

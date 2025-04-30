@@ -1,0 +1,119 @@
+---
+import ItemCountdown from './ItemCountdown.astro'
+
+interface Props {
+    deadline: string
+}
+
+const { deadline } = Astro.props
+---
+
+<div data-date={ deadline } class="container">
+    <ItemCountdown
+    id='data-days'
+    text='Días'
+    />
+    <span class="colon">:</span>
+    <ItemCountdown
+    id='data-hours'
+    text='Horas'
+    />
+    <span class="colon">:</span>
+    <ItemCountdown
+    id='data-minutes'
+    text='Min.'
+    />
+    <span class="colon">:</span>
+    <ItemCountdown
+    id='data-seconds'
+    text='Seg.'
+    />
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        .colon {
+            font-family: 'Myriad', sans-serif;
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<script>
+    const seconds = 1000
+    const minutes = seconds * 60
+    const hours = minutes * 60
+    const days = hours * 24
+
+    function init() {
+        const $deadline = document.querySelector('[data-date]')
+        if (!$deadline) return
+
+        const $days = document.getElementById('data-days')
+        const $hours = document.getElementById('data-hours')
+        const $minutes = document.getElementById('data-minutes')
+        const $seconds = document.getElementById('data-seconds')
+
+        const deadline = $deadline.getAttribute('data-date')
+        if (!deadline) return
+
+        const endDate = new Date(deadline).getTime()
+
+
+        const formatTime = (time: number) => {
+            return Math.floor(time).toString().padStart(2,"0")
+        }
+
+        function updateCountdown() {
+            const now = Date.now()
+            const diff = endDate - now
+
+            if (diff <= 0) {
+                if ($days) {
+                    $days.innerText = '00'
+                }
+                if ($hours) {
+                    $hours.innerText = '00'
+                }
+                if ($minutes) {
+                    $minutes.innerText = '00'
+                }
+                if ($seconds) {
+                    $seconds.innerText = '00'
+                }
+                return
+            }
+
+            if ($days instanceof HTMLElement) {
+                $days.innerText = formatTime(diff / days)
+            }
+
+            if ($hours instanceof HTMLElement) {
+                $hours.innerText = formatTime((diff % days) / hours )
+            }
+
+            if ($minutes instanceof HTMLElement) {
+                $minutes.innerText = formatTime((diff % hours) / minutes )
+            }
+
+            if ($seconds instanceof HTMLElement) {
+                $seconds.innerText = formatTime((diff % minutes) / seconds )
+            }
+        }
+
+        setInterval(updateCountdown, seconds);
+        
+    }
+
+    init()
+</script>
