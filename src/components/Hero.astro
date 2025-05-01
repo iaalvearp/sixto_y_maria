@@ -28,6 +28,8 @@ import MusicPlayer from "./MusicPlayer.astro";
 <style>
     header {
         width: 100%;
+        max-width: 48rem;
+        margin: 0 auto;
         height: 100vh;
         position: relative;
         background-image: url('/images/hero.webp');
@@ -146,6 +148,37 @@ import MusicPlayer from "./MusicPlayer.astro";
                 }
                 .grant {
                     font-size: 2.25rem;
+                }
+            }
+        }
+    }
+    @media (width >= 960px) {
+        header {
+
+            .text-container {
+
+                h2 {
+                    margin-bottom: 3vh;
+                    font-size: 1.75rem;
+                }
+                h1 {
+                    font-size: 2.25rem;
+                }
+            }
+            .versicle-container {
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+            .border-container {
+
+                .border-text {
+                    margin: 0;
+                    font-size: 1.125rem;
+                }
+                .grant {
+                    font-size: 2rem;
                 }
             }
         }
