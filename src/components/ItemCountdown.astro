@@ -9,9 +9,9 @@ interface Props {
 
 ---
 
-<div class="item-container flex flex-col justify-center items-center">
-    <span id={ id } class="item-number flex flex-col justify-center items-center gap-y-2 tabular-nums text-xl md:text-3xl">00</span>
-    <span class="item-text text-base md:text-2xl">{ text }</span>
+<div class="item-container">
+    <span id={ id } class="item-number">00</span>
+    <span class="item-text">{ text }</span>
 </div>
 
 <style>
@@ -35,6 +35,17 @@ interface Props {
             font-size: 0.75rem;
             font-weight: 300;
             text-transform: uppercase;
+        }
+    }
+    @media (width >= 768px) {
+        .item-container {
+
+            .item-number {
+                font-size: 2.25rem;
+            }
+            .item-text {
+                font-size: 1rem;
+            }
         }
     }
 </style>
