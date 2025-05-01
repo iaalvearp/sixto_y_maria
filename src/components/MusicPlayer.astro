@@ -1,4 +1,4 @@
-<div id="playerContainer" class="player-container cristal">
+<div id="playerContainer" class="player-container">
     <svg
       id="play" 
       width="28"
@@ -35,6 +35,7 @@
         align-items: center;
         border-radius: 9999px;
         color: var(--gray);
+        background-color: #FFF;
         outline: 2px solid #FFF;
         transition: all 0.3s;
         cursor: pointer;
@@ -62,11 +63,6 @@
         }
         }
 
-        .cristal {
-        background-color: rgb(255, 255, 255);
-        backdrop-filter: blur(4px);
-        }
-
 </style>
   
 
@@ -92,8 +88,10 @@
         }
       };
   
-      // Inicializa el estado en pausa
-      pauseMusic();
+      // Inicializa el estado en play
+      playMusic();
+
+      audio.addEventListener('ended', pauseMusic);
   
       // Asigna eventos solo si existen los elementos
       if (btnPlay) {
