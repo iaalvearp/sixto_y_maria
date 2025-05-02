@@ -1,0 +1,108 @@
+---
+interface Props {
+    src: string,
+    title: string,
+    hour?: string,
+    location?: string,
+    address: string,
+    href: string,
+    delay?: string
+}
+
+const { src, title, hour, location, address, href, delay } = Astro.props
+---
+
+<article class=`to-return-up ${delay}`>
+    <picture>
+        <img src={ src } alt="">
+    </picture>
+    <h2>{ title }</h2>
+    <p class="address">{ address }</p>
+    <h3 class="location">{ location }</h3>
+    <a href={ href } target="_blank" rel="noopener noreferrer">
+        <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="icon icon-tabler icons-tabler-filled icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" /></svg>
+    </a>
+</article>
+<style>
+    article {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--brown);        
+        picture {
+            display: block;
+            height: 5rem;
+            margin: 0 auto;
+            aspect-ratio: 1/1;
+        }
+        img {
+            height: 100%;
+        }
+        h2 {
+            font-size: 1.25rem; 
+            margin: 1rem 0;
+            font-family: 'Times', serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        h3, .address {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin: 0 auto;
+            font-family: 'Calibri', sans-serif;
+            font-weight: 400;
+            text-wrap: pretty;
+            width: 100%;
+            max-width: 10.4rem;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            height: 1.5rem;
+            max-width: 15rem;
+            padding: 0.25rem 0;
+            margin: 1.5rem auto 0;
+            border-radius: 0.5rem;
+            background-color: var(--gray);
+            color: #FFF;
+        }
+
+        svg {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    @media (width >= 768px) {
+        article {
+            padding: 2.5rem 0;
+
+            picture {
+                height: 8rem;
+            }
+            h2 {
+                font-size: 2.5rem;
+                margin: 1rem 0 0.25rem;                
+            }
+            h3 , .address {
+                font-size: 1.75rem;
+                line-height: 2rem;
+                max-width: 16rem;
+            }
+            a {
+                height: 2rem;
+            }
+        }
+    }
+
+</style>

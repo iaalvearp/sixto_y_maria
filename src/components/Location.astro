@@ -1,0 +1,43 @@
+---
+import LocationCards from "./LocationCards.astro"
+---
+
+<section>
+    <LocationCards 
+    title="15h00"
+    src="assets/icon-places-church.png"
+    address="Iglesia Católica María Madre de la Iglesia"
+    href="https://maps.app.goo.gl/q6JJhKgfAgJ6eWdJA"
+    />
+    <LocationCards 
+    title="16h30"
+    src="assets/icon-places-event.png"
+    address="IGUANAZU"
+    location="Bed & Breakfast"
+    href="https://maps.app.goo.gl/wtv9EV7NGCRFouBw7"
+    delay="delay-1"
+    />
+
+</section>
+
+<style>
+    section {
+        width: 100%;
+        max-width: 48rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 0 auto;
+        padding:0 5%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    @media (width >= 768px) {
+        section {
+
+           
+        }
+    }
+</style>
