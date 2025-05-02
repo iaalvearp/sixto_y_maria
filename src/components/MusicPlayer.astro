@@ -88,19 +88,19 @@
         }
       };
   
-      // Inicializa el estado en play
-      playMusic();
-
       audio.addEventListener('ended', pauseMusic);
-  
+
+      
       // Asigna eventos solo si existen los elementos
       if (btnPlay) {
         btnPlay.addEventListener('click', playMusic);
       }
-  
+      
       if (btnPause) {
         btnPause.addEventListener('click', pauseMusic);
       }
+      // Inicializa el estado en play
+      playMusic();
     });
   </script>
   
