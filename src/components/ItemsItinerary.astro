@@ -1,0 +1,55 @@
+---
+interface Props {
+    hour: string
+    text: string
+}
+
+const { hour, text }: Props = Astro.props
+---
+
+<div class="item">
+    <p class="hour"> { hour } </p>
+    <span class="line"></span>
+    <h2> { text } </h2>
+</div>
+
+<style>
+    .item {
+        width: 100%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1.25fr 2.75fr;
+        gap: 1rem;
+
+        .hour {
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--green);
+            margin: 0;
+        }
+        .line {
+            width: 80%;
+            height: 1px;
+            background-color: var(--gray);
+            margin: 0 auto;
+        }
+        h2 {
+            font-family: 'Calibri', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--gray);
+            margin: 0 ;
+        }
+    }
+    @media (width >= 768px) {
+        .item {
+
+            .hour {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,109 @@
+---
+import ItemsItinerary from "./ItemsItinerary.astro";
+
+
+---
+
+<section>
+    <div class="pic-container">
+        <img class="itinerary-pic" src="images/itinerary.webp" alt="">
+        <img class="itinerary-border up" src="assets/itinerary-border-up.png" alt="">
+        <img class="itinerary-border down" src="assets/itinerary-border-down.png" alt="">
+    </div>
+    <div class="items-container">
+        <ItemsItinerary 
+        hour="14:30"
+        text="Ceremonia Eclésiastica"
+        />
+        <ItemsItinerary 
+        hour="16:00"
+        text="Llegada a la Recepción"
+        />
+        <ItemsItinerary 
+        hour="16:30"
+        text="Piqueos y Estación de Retratos"
+        />
+        <ItemsItinerary 
+        hour="17:00"
+        text="Entrada de los Novios"
+        />
+        <ItemsItinerary 
+        hour="17:20"
+        text="Brindis"
+        />
+        <ItemsItinerary 
+        hour="18:00"
+        text="Cena"
+        />
+        <ItemsItinerary 
+        hour="19:00"
+        text="Empieza la Fiesta"
+        />
+        <ItemsItinerary 
+        hour="23:00"
+        text="Final"
+        />
+    </div>
+</section>
+
+<style>
+    section {
+        width: 100%;
+        max-width: 48rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .pic-container {
+        width: 100%;
+        height: 55vh;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+
+        .itinerary-pic {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            object-fit: cover;
+            object-position: center;
+            z-index: 0;
+        }
+        .itinerary-border {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+        .itinerary-border.up {
+            top: 0;
+        }
+        .itinerary-border.down {
+            bottom: 0;
+        }
+    }
+    .items-container {
+        width: 100%;
+        max-width: 48rem;
+        padding: 5vh 5vw;
+        box-sizing: border-box;
+        display: grid;
+        place-content: center;
+        gap: 3vh;
+        margin: 0 auto;
+    }
+    @media (width >= 768px) {
+        .pic-container {
+            height: 75vh;
+
+            .itinerary-pic {
+                bottom: unset;
+                top: 0;
+            }
+        }
+        .items-container {
+            padding: 5vh 10vw;
+        }
+        
+    }
+</style>
