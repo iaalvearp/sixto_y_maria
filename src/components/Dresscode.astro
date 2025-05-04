@@ -1,3 +1,200 @@
 ---
 
 ---
+
+<section>
+    <div class="dress-title">
+        <img src="assets/heart.png" alt="">
+        <h2>Dress Code</h2>
+    </div>
+    <div class="colors">
+        <div class="color one"></div>
+        <div class="color two"></div>
+        <div class="color three"></div>
+        <div class="color four"></div>
+        <div class="color five"></div>
+        <div class="color six"></div>
+        <div class="color seven"></div>
+    </div>
+    <div class="genders-container">
+        <div class="gender women">
+            <img src="assets/women.png" alt="">
+            <h2>MUJERES</h2>
+            <p>Veraniego elegante.</p>
+            <p>Vestido largo o vestido cocktail.</p>
+            <p>Por respeto a la ceremonia relgiosa, les pedimos evitar escotes pronunciados.</p>
+        </div>
+        <div class="middle-line"></div>
+        <div class="gender men">
+            <img class="pic-men" src="assets/men.png" alt="">
+            <h2>HOMBRES</h2>
+            <p>Traje formal con corbata.</p>
+            <p>Estilo elegante y acorde a la ocasión.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        width: 100%;
+        max-width: 48rem;
+        margin: 0 auto;
+        padding: 2vh 5vw;
+        display: grid;
+        grid-auto-rows: max-content;
+        gap: 2.5rem;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .dress-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        img {
+            width: 15vw;
+            max-width: 6rem;
+            height: auto;
+        }
+
+
+        h2 {
+            font-family: 'Brilliant';
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--green);
+            margin: 0;
+        }
+    }
+    .colors {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .75rem;
+
+        .color {
+            width: 15vw;
+            max-width: 4.5rem;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+        }
+        .color.one {
+            background-color: #FBC485;
+        }
+        .color.two {
+            background-color: #FAEE99;
+        }
+        .color.three {
+            background-color: #A6BE95;
+        }
+        .color.four {
+            background-color: #82ACCC;
+        }
+        .color.five {
+            background-color: #F9CAD3;
+        }
+        .color.six {
+            background-color: #DECEE7;
+        }
+        .color.seven {
+            background-color: #EA6F9A;
+
+        }
+    }
+    .genders-container {
+        display: grid;
+        grid-template-columns: 1fr 1px 1fr;
+        gap: 2rem;
+
+        .middle-line {
+            width: 100%;
+            height: 70%;
+            background-color: var(--gray);
+            border-radius: 50px;
+            margin: 5rem 0 0;
+        }
+    }
+    .gender {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+
+        img {
+            height: 8vh;
+            max-height: 5rem;
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        .pic-men {
+            padding: 0.25rem 0;
+        }
+
+        h2 {
+            font-family: 'Times', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--green);
+        }
+        p {
+            font-family: 'Calibri', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: var(--gray);
+            text-wrap: pretty;
+            margin: 0;
+        }
+    }
+
+    @media (width >= 768px) {
+        section {
+            padding: 2vh 10vw;
+        }
+        .dress-title h2 {
+            font-size: 3.5rem;
+        }
+        .colors {
+            gap: 1rem;
+        }
+
+        .genders-container {
+            
+            
+            .middle-line {
+                height: 70%;
+                margin: 7rem 0 0;
+            }
+        }
+        .gender {
+            gap: 1rem;
+            h2 {
+                font-size: 2.125rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        @media (width >= 900px) {
+            .colors {
+
+                .color {
+                    aspect-ratio: 1 / 1;
+                    width: 4rem;
+                    height: auto;
+                }
+            }
+            .gender {
+                img {
+                    height: 4rem;
+                }
+            }
+        }
+</style>
