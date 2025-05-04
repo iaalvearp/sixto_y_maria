@@ -1,0 +1,114 @@
+
+<section>
+    <div class="gift-pic-container">
+        <img src="images/gift.webp" alt="">
+        <div class="color-bg"></div>
+    </div>
+    <div class="gift-text-container">
+        <h2>Tu presencia en la Iglesia <strong>ES EL REGALO MÁS VALIOSO PARA NOSOTROS.</strong></h2>
+        <p>Tu oración, una bendición que atesoramos<br>profundamente.<br>Sin embargo, si deseas acompañarnos también con un gesto adicional, agradecemos su obsequio en sobre cerrado el día de la recepción o a la siguiente cuenta:</p>
+        <h3>María Fernanda Torres<br>C.I 0921958971<br>Banco Pichincha<br>Cuenta de ahorro: 2213554116</h3>
+    </div>
+</section>
+
+<style>
+    section {
+        width: 100%;
+        max-width: 48rem;
+        margin: 0 auto;
+        overflow: hidden;
+        text-align: center;
+
+    }
+    
+    .gift-text-container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        h2 {
+            font-family: 'Brilliant', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--green);
+            text-align: center;
+            margin: 0;
+            
+            strong {
+                font-size: 1.25rem;
+                font-family: 'Times', serif;
+                font-weight: 400;
+            }
+        }
+        h3 {
+            font-family: 'Calibri Bold', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--gray);
+            text-align: center;
+            margin: 0;
+        }
+        p {
+            font-family: 'Calibri', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--gray);
+            text-align: center;
+            margin: 0;
+        }
+    }
+    .gift-pic-container {
+        position: relative;
+        width: 100%;
+        max-width: 35rem;
+        height: auto;
+        aspect-ratio: 1/1;
+        padding: 2rem 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            object-fit: cover;
+            object-position: center;
+            filter: drop-shadow(8px 8px 10px rgba(0,0,0,0.6));
+            transform: rotate(-5deg);
+            left: -3rem;
+            z-index: 1;
+        }
+        .color-bg {
+            width: 90%;
+            height: auto;
+            aspect-ratio: 1/1;
+            position: absolute;
+            background-color: var(--green);
+            transform: rotate(5deg);
+            left: -1rem;
+        }
+    }
+    @media (width >= 768px) {
+        .gift-text-container {
+            width: 80%;
+            margin: 0 auto;
+            gap: 2rem;
+            h2 {
+                font-size: 2rem;
+                strong {
+                    font-size: 1.5rem;
+                }
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1.25rem;
+            }
+        }
+        .gift-pic-container {
+            max-width: 40rem;
+        }
+    }
+</style>
