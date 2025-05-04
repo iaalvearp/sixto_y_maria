@@ -46,11 +46,6 @@
             opacity: 1;
         }
 
-        @media (min-width: 768px) {
-            height: 3rem;
-            width: 3rem;
-        }
-
         svg {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
@@ -61,7 +56,21 @@
             transform: scale(1);
             }
         }
+        @media (width >= 768px) {
+          .player-container {
+            width: 3rem;
+            height: 3rem;
+          }
         }
+
+        @media (width >= 900px) {
+          .player-container {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+
+      }
 
 </style>
   
@@ -71,7 +80,7 @@
       const btnPlay = document.getElementById('play');
       const btnPause = document.getElementById('pause');
       const audio = new Audio('/sounds/music.m4a');
-  
+      
       const playMusic = () => {
         if (btnPlay && btnPause) {
           btnPlay.style.transform = "scale(0)";
@@ -79,7 +88,7 @@
           audio.play();
         }
       };
-  
+      
       const pauseMusic = () => {
         if (btnPlay && btnPause) {
           audio.pause();
@@ -87,7 +96,7 @@
           btnPause.style.transform = "scale(0)";
         }
       };
-  
+      
       audio.addEventListener('ended', pauseMusic);
 
       
@@ -99,8 +108,8 @@
       if (btnPause) {
         btnPause.addEventListener('click', pauseMusic);
       }
-      // Inicializa el estado en play
-      playMusic();
+      // Inicializa el estado en pause
+      pauseMusic();
     });
   </script>
   
