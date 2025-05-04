@@ -1,0 +1,105 @@
+
+<section>
+    <h2>Confirmacion de Asistencia</h2>
+    <div class="final-date">
+        <h3>¿VAS A SER PARTE DE NUESTRA HISTORIA DE AMOR?</h3>
+        <p>Por favor confirmar su asistencia haste el<br>31 de septiembre de 2025</p>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScqdK5bfJik4UTpgE_l9oVNiqf4-0zwJkobfCItkzR-eEC7Fg/viewform?usp=header">Confirmar aquí</a>
+    <h2>¡Te esperamos!</h2>
+</section>
+
+<style>
+    section {
+        width: 100%;
+        max-width: 48rem;
+        margin: 0 auto;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: .75rem 10vw 2rem;
+        box-sizing: border-box;
+        gap: 2rem;
+
+        h2 {
+            font-family: 'Brilliant', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--green);
+            text-align: center;
+            margin: 0;
+        }
+
+        a {
+            max-width: 20rem;
+            text-decoration: none;
+            color: #FFF;
+            background-color: var(--green);
+            opacity: 0.9;
+            transform: scale(1);
+            padding: 0.5rem 2rem;
+            border-radius: 0.5rem;
+            font-family: 'Calibri', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        .final-date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+
+            h3 {
+                font-family: 'Times', serif;
+                font-size: 1.125rem;
+                font-weight: 400;
+                color: var(--gray);
+                text-align: center;
+                margin: 0;
+            }
+            p {
+                font-family: 'Calibri', sans-serif;
+                font-size: 1rem;
+                font-weight: 400;
+                color: var(--gray);
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+
+    @media (width >= 768px) {
+        section {
+            gap: 2.5rem;
+
+            h2 {
+                font-size: 2.5rem;
+            }
+            .final-date {
+                gap: 1rem;
+                h3 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            a {
+                font-size: 1.5rem;
+                padding: 0.5rem 2.5rem;
+            }
+        }
+    }
+</style>

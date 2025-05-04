@@ -9,6 +9,10 @@
         <p>Tu oración, una bendición que atesoramos<br>profundamente.<br>Sin embargo, si deseas acompañarnos también con un gesto adicional, agradecemos su obsequio en sobre cerrado el día de la recepción o a la siguiente cuenta:</p>
         <h3>María Fernanda Torres<br>C.I 0921958971<br>Banco Pichincha<br>Cuenta de ahorro: 2213554116</h3>
     </div>
+    <div class="confirmation-pic-container">
+        <img class="confirmation-pic" src="images/confirmation.webp" alt="">
+        <img src="assets/gift-flower-up.png" class="confirmation-flower">
+    </im>
 </section>
 
 <style>
@@ -87,6 +91,31 @@
             background-color: var(--green);
             transform: rotate(5deg);
             left: -1rem;
+        }
+    }
+
+    .confirmation-pic-container {
+        position: relative;
+        width: 100%;
+        padding: 2rem 0 0;
+        height: auto;
+        aspect-ratio: 9 / 14;
+
+        .confirmation-flower {
+            width: 40%;
+            height: auto;
+            position: absolute;
+            left: -2.5rem;
+            top: -5.5rem;
+            z-index: 0;
+        }
+        .confirmation-pic {
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+            object-position: center;
+            left: 0;
+            z-index: 1;
         }
     }
     @media (width >= 768px) {
