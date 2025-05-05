@@ -7,8 +7,6 @@ import ItemsItinerary from "./ItemsItinerary.astro";
 <section>
     <div class="pic-container">
         <img class="itinerary-pic bright" src="images/itinerary.webp" alt="">
-        <img class="itinerary-border up" src="assets/itinerary-border-up.png" alt="">
-        <img class="itinerary-border down" src="assets/itinerary-border-down.png" alt="">
     </div>
     <div class="items-container">
         <ItemsItinerary 
@@ -55,7 +53,8 @@ import ItemsItinerary from "./ItemsItinerary.astro";
     }
     .pic-container {
         width: 100%;
-        height: 55vh;
+        height: 68vh;
+        max-height: 512px;
         position: relative;
         margin: 0 auto;
         overflow: hidden;

@@ -5,8 +5,6 @@
 <section>
     <div class="picture-container">
         <img class="hands bright" src="images/hands.webp" alt="">
-        <img class="border up" src="assets/calendary-border-up.png" alt="">
-        <img class="border down" src="assets/calendary-border-down.png" alt="">
     </div>
     <div class="flowers-container">
         <img class="flower left to-the-left" src="assets/calendary-left-flower.png" alt="">
@@ -33,31 +31,16 @@
     .picture-container {
         position: relative;
         width: 100%;
-        height: 12rem;
+        height: 31vh;
         overflow: hidden;
 
         .hands {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             object-position: center;
             z-index: 0;
-        }
-
-        .border {
-            position: absolute;
-            width: 100%;
-            height: auto;
-            z-index: 1;
-        }
-        .border.up {
-            top: 0;
-            left: 0;
-        }
-        .border.down {
-            bottom: 0;
-            left: 0;
         }
     }
     .flowers-container {

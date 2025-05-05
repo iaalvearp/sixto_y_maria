@@ -19,7 +19,6 @@ import MusicPlayer from "./MusicPlayer.astro";
         <MusicPlayer />
     </div>
     <div class="border-container to-return-up delay-1">
-        <img src="assets/hero-border-down.png" alt="">
         <p class="border-text to-the-right delay-2">FALTA<br>POCO PARA<br>EL <span class="grant">gran</span> DÍA</p>
     </div>
     <div class="countdown to-return-up ">
@@ -28,6 +27,30 @@ import MusicPlayer from "./MusicPlayer.astro";
 </header>
 
 <style>
+    @media (width >= 360px) {
+        .bg-blur {
+            width: 123%;
+        }
+    }
+    @media (width >= 375px) {
+        .bg-blur {
+            width: 106%;
+        }
+    }
+
+    @media (width >= 390px) {
+        .bg-blur {
+            width: 130%;
+        }
+    }
+
+    @media (width >= 412px) {
+        .bg-blur {
+            width: 130%;
+        }
+    }
+
+
     header {
         width: 100%;
         max-width: 48rem;
@@ -37,8 +60,7 @@ import MusicPlayer from "./MusicPlayer.astro";
         overflow: hidden;
 
         .bg-blur {
-            width: 100%;
-            height: 100%;
+            height: auto;
             position: absolute;
             top: 0;
             object-fit: cover;
