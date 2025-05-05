@@ -6,23 +6,23 @@ import MusicPlayer from "./MusicPlayer.astro";
 ---
 
 <header>
-    <img class="bg-blur" src="images/hero.webp" alt="">
-    <img class="bg-front" src="images/hero.webp" alt="">
-    <div class="green-line"></div>
-    <div class="text-container">
+    <img class="bg-blur bright" src="images/hero.webp" alt="">
+    <img class="bg-front bright" src="images/hero.webp" alt="">
+    <div class="green-line to-return-down"></div>
+    <div class="text-container to-return-down">
         <h2>NUESTRA BODA</h2>
         <h1>Sixto & Maria Fernanda</h1>
     </div>
-    <div class="versicle-container">
+    <div class="versicle-container to-return-up delay-1">
         <p>"Mas valen dos que uno porque obtienen<br>más fruto de su esfuerzo, porque si caen,<br>el uno levanta al otro"</p>
         <p>Eclesiastés 4:9-12</p>
         <MusicPlayer />
     </div>
-    <div class="border-container">
+    <div class="border-container to-return-up delay-1">
         <img src="assets/hero-border-down.png" alt="">
-        <p class="border-text">FALTA<br>POCO PARA<br>EL <span class="grant">gran</span> DÍA</p>
+        <p class="border-text to-the-right delay-2">FALTA<br>POCO PARA<br>EL <span class="grant">gran</span> DÍA</p>
     </div>
-    <div class="countdown">
+    <div class="countdown to-return-up ">
         <Countdown deadline="2025-08-16T14:30:00" />
     </div>
 </header>
@@ -136,7 +136,7 @@ import MusicPlayer from "./MusicPlayer.astro";
             width: 100%;
             height: 10vh;
             background-color: #fff;
-            
+            transition-delay: 0.25s;            
         }
     }
 
