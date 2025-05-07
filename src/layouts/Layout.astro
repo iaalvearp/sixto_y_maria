@@ -61,12 +61,12 @@
 	.to-return-up {
 		opacity: 0;
 		transform: translateY(100%);
-		transition: all 1s ease-in-out;
+		transition: all 2s ease-in-out;
 	}
 	.to-return-down {
 		opacity: 0;
 		transform: translateY(-100%);
-		transition: all 2s ease-in-out;
+		transition: all 1s ease-in-out;
 	}
 	.return {
 		animation: forwards;
@@ -130,20 +130,6 @@
 	});
 	pics.forEach((pic) => {
 		observerPics.observe(pic);
-	});
-
-	let observerFlowers = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add('flower-back');
-				observerFlowers.unobserve(entry.target);
-			} else {
-				entry.target.classList.remove('flower-back');
-			}
-		});
-	});
-	flowers.forEach((flower) => {
-		observerFlowers.observe(flower);
 	});
 
 	let observerSides = new IntersectionObserver((entries) => {
